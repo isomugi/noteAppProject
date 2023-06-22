@@ -1,0 +1,22 @@
+{% load static %}
+<div class="">
+    {% if user.is_authenticated %}
+    <a href="{% url 'note_app:index' %}">
+        <button type='button'>home</button>
+    </a>
+    <form action="{% url 'note_app:logout' %}", method='POST'>
+        {% csrf_token %}
+        <button type='submit'>logout</button>
+    </form>
+    {% else %}
+    <a href="{% url 'note_app:index' %}">
+        <button type='button'>home</button>
+    </a>
+    <a href="{% url 'note_app:login' %}">
+        <button type='button'>login</button>
+    </a>
+    <a href="{% url 'note_app:register' %}">
+        <button type='button'>register</button>
+    </a>
+    {% endif %}
+</div>

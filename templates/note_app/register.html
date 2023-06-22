@@ -1,0 +1,17 @@
+{% extends 'note_app/base.html' %}
+
+{% block content %}
+	<form method="POST" action="{% url 'note_app:register' %}">
+		{% csrf_token %}
+		<label>username</label>
+		{{ form.username }}
+		{{ form.username.errors }}
+		<label>password1</label>
+		{{ form.password1 }}
+		{{ form.password1.errors }}
+		<label>password2</label>
+		{{ form.password2 }}
+		{{ form.password2.errors }}
+		<button type='submit'>register</button>
+	</form>
+{% endblock content %}

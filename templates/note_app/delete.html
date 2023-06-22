@@ -1,0 +1,14 @@
+{% extends 'note_app/base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <h1>Delete your post.</h1>
+    <p>Are you sure you want to delete the following post?</p>
+    <p>Title: {{ post.title }}</p>
+    <p>Content: {{ post.content }}</p>  
+    <form action="{% url 'note_app:delete' post.id%}" method="POST">
+        {% csrf_token %}
+        <button type='submit'>delete</button>
+    </form>
+</div>
+{% endblock content %}    

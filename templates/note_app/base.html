@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>Note App</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/static/css/main.css">
+        {% csrf_token %}
+    </head>
+    <body>
+        <header>
+            {% include 'note_app/navi.html' %}
+        </header>
+        {% block content %}{% endblock %}
+    </body>
+    <foot>
+        
+    </foot>
+</html>
