@@ -5,7 +5,7 @@ body {
 .container {
     margin: 0 auto;
     max-width: 600px;
-    padding: 20px;
+    padding: 10px;
     border: 1px solid #ccc;
 }
 .center {
@@ -16,6 +16,7 @@ body {
 }
 .right{
     font-size: 24px;
+    
 }
 .left{
     font-size: 24px;
@@ -27,9 +28,9 @@ body {
     border: 1px solid #ccc;
 }
 h1 {
-    margin-top: 100;
+    margin-top: 10;
     color: black;
-    font-size: 24px;
+    font-size: 50px;
 }
 form {
     margin-bottom: 20px;

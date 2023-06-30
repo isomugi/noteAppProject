@@ -1,8 +1,8 @@
-<div class=''>
+<div class='container'>
     <a href="{% url 'note_app:detail' post.id %}" >
         <div class="bg-white p-3">
-            {{ post.title }}
-            <div class="fa-08x">
+            <h1>{{ post.title }}</h1>
+            <div class="right">
                 {{ post.pub_date|date:"y-m-d/H:i" }}
             </div>
         </div>
