@@ -73,7 +73,7 @@ def login_view(request):
     if request.user.is_authenticated:
         return redirect('note_app:index')
     elif request.method == 'POST':
-        form = LoginForm(request.POST)
+        form = LoginForm(data = request.POST)
         if form.is_valid():
             username = form.cleaned_data['username']
             password = form.cleaned_data['password']
