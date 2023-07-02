@@ -1,0 +1,57 @@
+body { 
+    min-width: 800px;/* width: 100vw; */
+    min-height: 100vh;/*vh: ビューポートの高さの1% */
+    display: grid;
+    grid-template: 
+        "header header header header header" 100px
+        ".. .. .. .. .. " 10px
+        "left .. center .. right" 1fr
+        ".. .. .. .. .. " 10px
+        "footer footer footer  footer footer"100px
+        /100px 20px 1fr 20px 100px;
+    /* gap: 10px; */
+    background: #f1e9e9;
+}
+
+header{
+    grid-area: header;
+}
+
+footer{
+    grid-area: footer;
+}
+
+main {
+    grid-area: center;
+    background-color: rgb(212, 84, 84);
+}
+
+navi{
+    grid-area: left;
+}
+aside{
+    grid-area: right;
+}
+
+.container{
+    width:400px;
+    background-color: aqua;
+}
+.post{
+    width: 300px;
+    margin: 0 auto;
+    padding: 10px;
+    background: #fff;
+}
+
+@media screen and (max-width: 800px){
+    body{
+        grid-template: 
+        "header" 100px
+        "left"
+        "center" 1fr
+        "right"
+        "footer" 100px;
+    }
+    
+}

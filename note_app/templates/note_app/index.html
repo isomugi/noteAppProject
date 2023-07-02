@@ -1,6 +1,5 @@
 {% extends 'note_app/base.html' %}
 {% block content %}
-<h1>Welcome to your notes.</h1>
 {% if latest_post_list %}
 <div class="container">
     {% for post in latest_post_list %}
@@ -10,11 +9,4 @@
     {% else %}
         <p>No posts available.</p>
     {% endif %}
-
-<div class="mt-4">
-    <a href="{% url 'note_app:create' %}">
-        <button type='button'>投稿</button>
-    </a>
-
-</div>
 {% endblock content %}              

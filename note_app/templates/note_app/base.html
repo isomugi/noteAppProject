@@ -5,15 +5,26 @@
         <meta charset="utf-8">
         <title>Note App</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type='text/css' href="/static/css/main.css">
+        {% comment %} <link rel="stylesheet" type='text/css' href="{% static 'css/main.css' %}"> {% endcomment %}
+        <link rel="stylesheet" type='text/css' href="{% static 'css/style.css' %}">
+
+        {% comment %} <script src="{% static 'js/.appjs' %}"></script> {% endcomment %}
     </head>
     <body>
         <header>
-            {% include 'note_app/navi.html' %}
+            <h1>Welcome to your notes.</h1>
         </header>
-        <div class='center'>
-            {% block content %}{% endblock %}
-        </div>
+        <navi>{% include 'note_app/navi.html' %}</navi>
+        <main>{% block content %}{% endblock %}</main>
+        <aside>aside</aside>
+        <footer>
+            <div class="">
+                <a href="{% url 'note_app:create' %}">
+                    <button type='button'>create post</button>
+                </a>
+            </div>
+        </footer>
+
     </body>
     <foot>
         
